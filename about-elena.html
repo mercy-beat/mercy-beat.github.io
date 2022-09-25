@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <script src="https://kit.fontawesome.com/514fc798be.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Mercy Beat | Home</title>
+  <link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/AsnfZPfQCCmliIqurf0594isdMbtCfMrosAH9Y76TRJdNmsVOO3P7wFEesFhWULX-p3o_kEFt65vOfNxMtQuscx7-1IbUP2qFFcLsI063vbx1PFG7sTIN0d6ux6SfEDoDq5rJMXd=w2400">
+    <style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("https://lh3.googleusercontent.com/FcsWcMG277SpHUKKJb87U-Oyz_vPpQjBGXG1pe3tMWi2mPhHd0XXxV9bd8rLNSE-dQ6KtfADPEcKpxeD43XeB8iT51mrd7-egcJ1pYXDe7uUPLccyN-HQuEkMThzgV6NTkLlC42oTQ=w2400");
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+  </head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="https://mercy-beat.github.io/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="https://mercy-beat.github.io/#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
+    <a href="https://mercy-beat.github.io/#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SEE US LIVE</a>
+    <a href="https://mercy-beat.github.io/#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="https://www.tiktok.com/@mercy_beat?lang=en" class="w3-bar-item w3-button">TikTok</a>
+        <a href="https://www.youtube.com/channel/UCbkygdx6qytQYhvbZwcH8Zw" class="w3-bar-item w3-button">YouTube</a>
+        <a href="https://open.spotify.com/artist/6rad6sDm0m3egYkmotCki6?si=QUX3xFMbSlK5QEWClY2UuA" class="w3-bar-item w3-button">Spotify</a>
+        <a href="https://discord.gg/8mF4pkSMs3" class="w3-bar-item w3-button">Discord</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SEE US LIVE</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
+</div>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">ELENA KETCHESON</span>
+  </div>
+</div>
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">MEET THE PIANIST/SINGER</h2>
+    <p class="w3-opacity"><i>Elena Ketcheson</i></p>
+</div>
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+  
+<!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+
+  <div style="display:flex; align-items:center; justify-content:center;">
+    <div class="w3-col m3">
+      <img src="https://lh3.googleusercontent.com/ZxqStsR7jNkncCpcympoKF5Uyiej3IR5hZf45vvmwhSgs4KonkPvtvysblLbIqeg9gOlM0OlV_aLPmQCANvyjU-VfUhPtQpHvhvBy_kQrf0F7aaBywP0x0fQVtxgDJ5OTAYZPkLtyw=w2400" style="width:100%" alt="The mist over the mountains">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://lh3.googleusercontent.com/REl3VVN2H0hyFHq8Y5MCZ1EQNiPdIRH1x22ShhB0hlQFcL3hwO-mKf3VH-iH1mtLiP26wDivhhJvlzT4pZu2Qi-CXDAtvTlT7ZHcFpQAl0Do1LzpNZseWdFgDEyZdWVtF4aRBfBAqg=w2400" style="width:100%" alt="Coffee beans">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://lh3.googleusercontent.com/_P_kb1cOmUXLZ5TCiXqxymEgoG-H1ox3oBVSCrLhN5YTTGdNXTfYx1FQB0T1hq1hwKrzc0afdtX5K-wDFiKpU38wLXO4OBvxLku0Vj6SqaxlV7W9GGOtyRahMam9rLQCw1254dxFcg=w2400" style="width:100%" alt="Bear closeup">
+    </div>
+  </div>
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+<p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+  <div style="display:flex; align-items:center; justify-content:center;">
+    <div class="w3-col m3">
+      <img src="https://lh3.googleusercontent.com/9i_N0AhsXNLL6buTbT6c9Ub0NAFP5x0ZDTsGzqyRpMs9KHG3oG7kfotlv1pqMuvg3ZFwHd446Q69Vln5sPyJbT-IsPIZlJnChv9qdIjgE6DWWckC1JueSUc1M9E5X3abCIbwdWCWtw=w2400" style="width:100%" alt="My beloved typewriter">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://lh3.googleusercontent.com/cvKOIhHq4CR0AwfvVTRLBPe_2FopuetMEk1dSzKLJTuhD8SAJgh2cpf4tpHg1hEZ3bUrjavhptRwCMHABJHXVevhzKB61jSacDzdc1xN_yCK75tI7H32IW_NHu5ucgyT_UU4aRvhmA=w2400" style="width:100%" alt="Empty ghost train">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://lh3.googleusercontent.com/Vi4LEdib1qL9vTOZritfI9z2oU4df-qAuh-UQOJM38JK-7r7FS1ZTZ1SN5DylvqHdKvOB3EUh8B2HEJ9MZ7QJABq6P_gsRd2e7tfG650ikRDNx9DsbbquWjgVNfZ-IHu-L6XSCI-Yw=w2400" style="width:100%" alt="Sailing">
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT US</h2>
+    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> KAUST, Saudi Arabia<br>
+        <!-- <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br> -->
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: mercy.beat2022@mail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="https://lh3.googleusercontent.com/iAt6i1m1SliJMs86-rOcHcaMarKRDiRuqZ8XnUsQ3gsdb8xdLSjvdmU8dg0lR8Onkqp30lH331fin5yXmJIzU5Ewk3IeR9ZH0fo_IL8xaCPc69--0nmD8et5eHbObrMNxyVHS1QUuQ=w2400" class="w3-image" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
+  <a href="https://www.instagram.com/mercy__beat/"><i class="fa-brands fa-instagram"></i></a>
+  <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+  <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+  <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
+  <!-- <i class="fa fa-linkedin w3-hover-opacity"></i> --> 
+  <a href="https://www.tiktok.com/@mercy_beat?lang=en"><i class="fa-brands fa-tiktok w3-hover-opacity"></i></a>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+  
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+</script>
+
+</body>
+</html>
