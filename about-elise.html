@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
   <script src="https://kit.fontawesome.com/514fc798be.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Mercy Beat | Home</title>
   <link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/AsnfZPfQCCmliIqurf0594isdMbtCfMrosAH9Y76TRJdNmsVOO3P7wFEesFhWULX-p3o_kEFt65vOfNxMtQuscx7-1IbUP2qFFcLsI063vbx1PFG7sTIN0d6ux6SfEDoDq5rJMXd=w2400">
     <style>
@@ -290,6 +293,17 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
 }
 </script>
 
