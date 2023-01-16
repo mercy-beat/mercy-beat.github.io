@@ -282,7 +282,7 @@
     <a href="https://discord.gg/8mF4pkSMs3"><i class="fa-brands fa-discord"></i></a>
   </footer>
 
-  <script>
+  <script type="text/javascript">
   // Automatic Slideshow - change image every 4 seconds
   var myIndex = 0;
   carousel();
@@ -316,19 +316,17 @@
       modal.style.display = "none";
     }
   }
-  window.addEventListener("load", function(){
-    setTimeout(
-        function open(event){
-            document.querySelector(".popup").style.display = "block";
-        },
-        2000 
-    )
-});
-
-
-document.querySelector("#close").addEventListener("click", function(){
-    document.querySelector(".popup").style.display = "none";
-});
+  window.addEventListener(“load”, function(){
+      setTimeout(
+          function open(event){
+              document.querySelector(“.popup”).style.display = “block”;
+          },
+          1000 
+      )
+  });
+  document.querySelector("#close").addEventListener("click", function(){
+      document.querySelector(".popup").style.display = "none";
+  });
   </script>
 
 </body>
