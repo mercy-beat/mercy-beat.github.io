@@ -20,50 +20,52 @@
       vertical-align: middle;
       padding: 1rem 1rem;
     }
-  </style>
-  <style media="screen">
-    *,
-    *:before,
-    *:after{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
+    .modalDialog {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 99999;
+      opacity: 0;
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+      pointer-events: none;
     }
+    .modalDialog:target {
+      opacity: 1;
+      pointer-events: auto;
     }
-    .popup{
-      background-color: #ffffff;
-      width: 600;
-      padding: 30px 40px;
-      position: absolute;
-      transform: translate(-50%,-50%);
-      left: 50%;
-      top: 50%;
-      border-radius: 8px;
-      display: none;
-      text-align: center;
+    .modalDialog > div {
+      width: 400px;
+      position: relative;
+      margin: 10% auto;
+      padding: 5px 20px 13px 20px;
+      border-radius: 10px;
+      background: #fff;
+      background: #339999;
     }
-    .popup button{
-      display: block;
-      margin:  0 0 20px auto;
-      background-color: transparent;
-      font-size: 30px;
-      color: #ffffff;
-      background: #03549a;
-      border-radius: 100%;
-      width: 40px;
-      height: 40px;
-      border: none;
-      outline: none;
-      cursor: pointer;
-    }
-    .popup h2{
-      margin-top: -20px;
-    }
-    .popup p{
-      font-size: 14px;
-      text-align: justify;
-      margin: 20px 0;
+    .close {
+      background: #606061;
+      color: #FFFFFF;
       line-height: 25px;
+      position: absolute;
+      right: -12px;
+      text-align: center;
+      top: -10px;
+      width: 24px;
+      text-decoration: none;
+      font-weight: bold;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      border-radius: 12px;
+      -moz-box-shadow: 1px 1px 3px #000;
+      -webkit-box-shadow: 1px 1px 3px #000;
+      box-shadow: 1px 1px 3px #000;
+    }
+    .close:hover {
+      background: #00d9ff;
     }
   </style>
 </head>
@@ -98,13 +100,25 @@
     <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
   </div>
 
-  <div class=”popup” onLoad="popup('autopopup.html', 'ad')">
+<!--   <div class=”popup” onLoad="popup('autopopup.html', 'ad')">
     <button id=”close”>x</button>
     <img src="https://lh3.googleusercontent.com/MVdSIUCe6kk3e6mNfbG7CdHO9Eq8QQ7QUnXaua-ZZIXHDdFl5otLBkJT5yyczlK8fcPiBWWrRlTZ_ntUm2yLonWX6r4B2gIKNWXbOj8mwlHnslDliYbu4gAlgNiRpA7KEShrmDZ_qd0=w2400">
     <h2>Come to our fundraiser concert!</h2>
     <p>Mercy Beat is planning on hosting a fundraiser/concert to rally up some money for the Orphanage from which Maya was adopted.</p>
     <a href="https://www.instagram.com/p/Cnd8h4dMK-5/?utm_source=ig_web_copy_link"> <button class="w3-button w3-black w3-margin-bottom">More info </button> </a>
-  </div>
+  </div> -->
+  <a href="#openModal">Open Modal</a>
+    <div id="openModal" class="modalDialog">
+      <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <p style="color:white">This is a sample modal box that can be created using the powers of CSS3.</p>
+
+      </div>
+    </div>
+    <br />
+    <br />
+    <button onclick="openPopup()">Open popup by Javascript</button>
 
   <!-- Page content -->
   <div class="w3-content" style="max-width:2000px;margin-top:46px">
@@ -317,8 +331,12 @@
     if (event.target == modal) {
       modal.style.display = "none";
     }
-  }
+   }
+    function openPopup() {
+      window.location.hash = 'openModal';
+    }
+
+    window.onload = openPopup;
   </script>
-  <script type="text/javascript"> function popup(mylink, windowname) { if (! window.focus)return true; var href; if (typeof(mylink) == 'string') href=mylink; else href=mylink.href; window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); return false; } </script>
 </body>
 </html>
