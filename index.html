@@ -1,342 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-  <script src="https://kit.fontawesome.com/514fc798be.js" crossorigin="anonymous"></script>
-  <title>Mercy Beat | Home</title>
-  <link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/AsnfZPfQCCmliIqurf0594isdMbtCfMrosAH9Y76TRJdNmsVOO3P7wFEesFhWULX-p3o_kEFt65vOfNxMtQuscx7-1IbUP2qFFcLsI063vbx1PFG7sTIN0d6ux6SfEDoDq5rJMXd=w2400">
-  <style>
-    .parent {
-      text-align: center;
-      margin: 1rem;
-      padding: 2rem 2rem;
-    }
-    .child {
-      display: inline-block;
-      vertical-align: middle;
-      padding: 1rem 1rem;
-    }
-    .modalDialog {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 99999;
-      opacity: 0;
-      -webkit-transition: opacity 400ms ease-in;
-      -moz-transition: opacity 400ms ease-in;
-      transition: opacity 400ms ease-in;
-      pointer-events: none;
-    }
-    .modalDialog:target {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .modalDialog > div {
-      width: 75%;
-      position: relative;
-      margin: 10% auto;
-      padding: 5px 20px 13px 20px;
-      border-radius: 10px;
-      background: #fff;
-      background: #339999;
-      margin-top: 5%;
-    }
-    .close {
-      background: #606061;
-      color: #FFFFFF;
-      line-height: 25px;
-      position: absolute;
-      right: -12px;
-      text-align: center;
-      top: -10px;
-      width: 24px;
-      text-decoration: none;
-      font-weight: bold;
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px;
-      border-radius: 12px;
-      -moz-box-shadow: 1px 1px 3px #000;
-      -webkit-box-shadow: 1px 1px 3px #000;
-      box-shadow: 1px 1px 3px #000;
-    }
-    .close:hover {
-      background: #00d9ff;
-    }
-    #popupImage {
-      width: 30%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .popupText {
-      text-align: center;
-  </style>
-</head>
-<body>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+      <script src="https://kit.fontawesome.com/514fc798be.js" crossorigin="anonymous"></script>
+      <title>Mercy Beat | Home</title>
+      <link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/AsnfZPfQCCmliIqurf0594isdMbtCfMrosAH9Y76TRJdNmsVOO3P7wFEesFhWULX-p3o_kEFt65vOfNxMtQuscx7-1IbUP2qFFcLsI063vbx1PFG7sTIN0d6ux6SfEDoDq5rJMXd=w2400">
+      <style>
+        .parent {
+          text-align: center;
+          margin: 1rem;
+          padding: 2rem 2rem;
+        }
+        .child {
+          display: inline-block;
+          vertical-align: middle;
+          padding: 1rem 1rem;
+        }
+        .modalDialog {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 99999;
+          opacity: 0;
+          -webkit-transition: opacity 400ms ease-in;
+          -moz-transition: opacity 400ms ease-in;
+          transition: opacity 400ms ease-in;
+          pointer-events: none;
+        }
+        .modalDialog:target {
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .modalDialog > div {
+          width: 75%;
+          position: relative;
+          margin: 10% auto;
+          padding: 5px 20px 13px 20px;
+          border-radius: 10px;
+          background: #fff;
+          background: #339999;
+          margin-top: 5%;
+        }
+        .close {
+          background: #606061;
+          color: #FFFFFF;
+          line-height: 25px;
+          position: absolute;
+          right: -12px;
+          text-align: center;
+          top: -10px;
+          width: 24px;
+          text-decoration: none;
+          font-weight: bold;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          border-radius: 12px;
+          -moz-box-shadow: 1px 1px 3px #000;
+          -webkit-box-shadow: 1px 1px 3px #000;
+          box-shadow: 1px 1px 3px #000;
+        }
+        .close:hover {
+          background: #00d9ff;
+        }
+        #popupImage {
+          width: 30%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 2%;
+        }
+        .popupText {
+          text-align: center;
+        #popupButton {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+      </style>
+    </head>
+  <body>
 
-  <!-- Navbar -->
-  <div class="w3-top">
-    <div class="w3-bar w3-black w3-card">
-      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-      <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
-      <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SEE US LIVE</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-      <div class="w3-dropdown-hover w3-hide-small">
-        <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="https://www.tiktok.com/@mercy_beat?lang=en" class="w3-bar-item w3-button">TikTok</a>
-          <a href="https://www.youtube.com/channel/UCbkygdx6qytQYhvbZwcH8Zw" class="w3-bar-item w3-button">YouTube</a>
-          <a href="https://open.spotify.com/artist/6rad6sDm0m3egYkmotCki6?si=QUX3xFMbSlK5QEWClY2UuA" class="w3-bar-item w3-button">Spotify</a>
-          <a href="https://discord.gg/8mF4pkSMs3" class="w3-bar-item w3-button">Discord</a>
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
+        <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SEE US LIVE</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="https://www.tiktok.com/@mercy_beat?lang=en" class="w3-bar-item w3-button">TikTok</a>
+            <a href="https://www.youtube.com/channel/UCbkygdx6qytQYhvbZwcH8Zw" class="w3-bar-item w3-button">YouTube</a>
+            <a href="https://open.spotify.com/artist/6rad6sDm0m3egYkmotCki6?si=QUX3xFMbSlK5QEWClY2UuA" class="w3-bar-item w3-button">Spotify</a>
+            <a href="https://discord.gg/8mF4pkSMs3" class="w3-bar-item w3-button">Discord</a>
+          </div>
+        </div>
+        <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+      <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+      <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SEE US LIVE</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+      <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+        <div id="openModal" class="modalDialog">
+        <div>
+          <a href="#close" title="Close" class="close">X</a>
+
+          <img id="popupImage" class="w3-center" src="https://lh3.googleusercontent.com/MVdSIUCe6kk3e6mNfbG7CdHO9Eq8QQ7QUnXaua-ZZIXHDdFl5otLBkJT5yyczlK8fcPiBWWrRlTZ_ntUm2yLonWX6r4B2gIKNWXbOj8mwlHnslDliYbu4gAlgNiRpA7KEShrmDZ_qd0=w2400">
+          <h2 class="popupText">Come to our fundraiser concert!</h2>
+          <p class="popupText">Mercy Beat is planning on hosting a fundraiser/concert to rally up some money for the Orphanage from which Maya was adopted.</p>
+          <a href="https://www.instagram.com/p/Cnd8h4dMK-5/?utm_source=ig_web_copy_link"> <button id="popupButton" class="w3-button w3-black w3-margin-bottom">More info </button> </a>
         </div>
       </div>
-      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-    </div>
-  </div>
 
-  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SEE US LIVE</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-    <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
-  </div>
- 
-  <!-- Page content -->
-  <div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-      <div id="openModal" class="modalDialog">
-      <div>
-        <a href="#close" title="Close" class="close">X</a>
-        
-        <img id="popupImage" class="w3-center" src="https://lh3.googleusercontent.com/MVdSIUCe6kk3e6mNfbG7CdHO9Eq8QQ7QUnXaua-ZZIXHDdFl5otLBkJT5yyczlK8fcPiBWWrRlTZ_ntUm2yLonWX6r4B2gIKNWXbOj8mwlHnslDliYbu4gAlgNiRpA7KEShrmDZ_qd0=w2400">
-        <h2 class="popupText">Come to our fundraiser concert!</h2>
-        <p class="popupText">Mercy Beat is planning on hosting a fundraiser/concert to rally up some money for the Orphanage from which Maya was adopted.</p>
-        <a href="https://www.instagram.com/p/Cnd8h4dMK-5/?utm_source=ig_web_copy_link"> <button id="popupButton" class="w3-button w3-black w3-margin-bottom">More info </button> </a>
+      <!-- Automatic Slideshow Images -->
+      <div class="mySlides w3-display-container w3-center">
+        <img src="https://lh3.googleusercontent.com/LHpJ2_ungFK-1cJcZVqPUtqcO7jQkUnV2z5aPeq81nSw90NASmY090RqK-gmoW1WYKXku1W16RtWcbQBmv1JI8evmxiG4ycHB0huonQUDp_anuTW_xCLIc9EYmjAGUdBwXuON697_g=w2400" style="width:100%"/>
+        <!-- <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+          <h3>Mercy Beat</h3>
+          <p><b>Prepping for our first concert! (Missing a few members who were setting up)</b></p>   
+        </div> -->
       </div>
-    </div>
-    
-    <!-- Automatic Slideshow Images -->
-    <div class="mySlides w3-display-container w3-center">
-      <img src="https://lh3.googleusercontent.com/LHpJ2_ungFK-1cJcZVqPUtqcO7jQkUnV2z5aPeq81nSw90NASmY090RqK-gmoW1WYKXku1W16RtWcbQBmv1JI8evmxiG4ycHB0huonQUDp_anuTW_xCLIc9EYmjAGUdBwXuON697_g=w2400" style="width:100%"/>
-      <!-- <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>Mercy Beat</h3>
-        <p><b>Prepping for our first concert! (Missing a few members who were setting up)</b></p>   
-      </div> -->
-    </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="https://lh3.googleusercontent.com/kFXt0uGzWiCtWWOt5QRIJKdgXX6A-z6KP6TS9AeSgLyzB_YDEewvNz5ESKBEYZmdg1vaNtIjMewg30FreMiEjXlhdeJL2fWMqtT7HaFmC44DY9tZthkfV6LLt3lrSJ2YlZT8Qi9S=w2400" style="width:100%">
-      <!-- <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>Thursday Night Live</h3>
-        <p><b>Feeling pumped after our final concert of the school year!</b></p>    
-      </div> -->
-    </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="https://lh3.googleusercontent.com/H3KaexKdIxJOIrFQqogTVnVbBotxsCFT0k4H4uRAiQ2Zeba22l-yMjB1IHHPA1C4hmBtZW1Qz_KjU9vmIWVz9qGQrjUTvjzxdW3VPJGPsnzznNAneTS3-8ARS-8oya2-0Km0pfZJWw=w2400" style="width:100%">
-      <!-- <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>Our First Concert</h3>
-        <p><b>Performing together as a group for the first time certainly makes for a night we won't forget.</b></p>    
-      </div> -->
-    </div>
+      <div class="mySlides w3-display-container w3-center">
+        <img src="https://lh3.googleusercontent.com/kFXt0uGzWiCtWWOt5QRIJKdgXX6A-z6KP6TS9AeSgLyzB_YDEewvNz5ESKBEYZmdg1vaNtIjMewg30FreMiEjXlhdeJL2fWMqtT7HaFmC44DY9tZthkfV6LLt3lrSJ2YlZT8Qi9S=w2400" style="width:100%">
+        <!-- <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+          <h3>Thursday Night Live</h3>
+          <p><b>Feeling pumped after our final concert of the school year!</b></p>    
+        </div> -->
+      </div>
+      <div class="mySlides w3-display-container w3-center">
+        <img src="https://lh3.googleusercontent.com/H3KaexKdIxJOIrFQqogTVnVbBotxsCFT0k4H4uRAiQ2Zeba22l-yMjB1IHHPA1C4hmBtZW1Qz_KjU9vmIWVz9qGQrjUTvjzxdW3VPJGPsnzznNAneTS3-8ARS-8oya2-0Km0pfZJWw=w2400" style="width:100%">
+        <!-- <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+          <h3>Our First Concert</h3>
+          <p><b>Performing together as a group for the first time certainly makes for a night we won't forget.</b></p>    
+        </div> -->
+      </div>
 
-    <!-- The Band Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-      <h2 class="w3-wide">MERCY BEAT</h2>
-      <p class="w3-opacity"><i>We love music</i></p>
-      <p class="w3-justify">Just a couple of teens living life to the fullest! Mercy beat is a band consisted of 4 members. Cameron Johnson the drummer, Elise Paterson guitar (chords), Elena Ketcheson who plays the Piano, and Maya Vink who also plays guitar, (Fingerpicking style) and bass. The band started in late 2021 and early 2022 for a school hosted event and ever since then they've started writing songs in Maya's in home studio. The songs written are a range of different genre's going from full on Pop-Punk all the way to hints of Musical Theatre. Special thanks to: Naomi Nason - Photographer, Evan Tzavaras - Photographer/Videographer, Frank Vink - Co-producer/Editor, Rita Sabiiti - Instrumental support/Music guidance</p>
-  <!--    <div style="display:flex; align-items:center; justify-content:center;"> -->
-      <div class="w3-row w3-padding-32">
-        <a href="https://mercy-beat.github.io/about-maya"><div class="w3-half">
-          <p>Maya</p>
-          <img src="https://lh3.googleusercontent.com/_XVMtgNaT8ZeuMzzJy8r15yDCkDdO0-AGQwGjFTnrbFzldeZecMsFb8y59s3E8tm5Spl_RWrTMDOiPQmp3E28DzbC8Xl_FI47QCz7bf_b0sZU-jCHX369rRUpYYEWkQ-sQRrnDdb-w=w2400" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div></a>
-        <a href="https://mercy-beat.github.io/about-cameron"><div class="w3-half">
-          <p>Cameron</p>
-          <img src="https://lh3.googleusercontent.com/G2ek5Gggr7e5vmY9kn299uGksiKQhmVwWNd3dbSLNbrlOzT-EO7eDXWMyGHP_g_Y2fjuOzwuxkoxgXhpNhkgmsHlFwM6TP21HrExCpbcZkrUkAhq7Zfdl2uGoBwiytxJmw4zfwwnSg=w2400" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div></a>
+      <!-- The Band Section -->
+      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+        <h2 class="w3-wide">MERCY BEAT</h2>
+        <p class="w3-opacity"><i>We love music</i></p>
+        <p class="w3-justify">Just a couple of teens living life to the fullest! Mercy beat is a band consisted of 4 members. Cameron Johnson the drummer, Elise Paterson guitar (chords), Elena Ketcheson who plays the Piano, and Maya Vink who also plays guitar, (Fingerpicking style) and bass. The band started in late 2021 and early 2022 for a school hosted event and ever since then they've started writing songs in Maya's in home studio. The songs written are a range of different genre's going from full on Pop-Punk all the way to hints of Musical Theatre. Special thanks to: Naomi Nason - Photographer, Evan Tzavaras - Photographer/Videographer, Frank Vink - Co-producer/Editor, Rita Sabiiti - Instrumental support/Music guidance</p>
+    <!--    <div style="display:flex; align-items:center; justify-content:center;"> -->
         <div class="w3-row w3-padding-32">
-        <a href="https://mercy-beat.github.io/about-elena"><div class="w3-half">
-          <p>Elena</p>
-          <img src="https://lh3.googleusercontent.com/c24N_ahsMAujks-F9DqsyxrevVtBHqVmQ00UFHKvhFt3D22r3up2G4fAxkxdRzj6Ku7xl_qjzJS2WrDNdAx-ie7kTfE2u8I18clL7m3zrojWiKAMmyK4m9P1ma3erBRbtHHyxDV4zg=w2400" class="w3-round" alt="Random Name" style="width:60%">
-        </div> </a>
-        <a href="https://mercy-beat.github.io/about-elise"><div class="w3-half">
-          <p>Elise</p>
-          <img src="https://lh3.googleusercontent.com/JLPX8IqyPOemXL2uZRlt3ZdUEnIyGCT1qyw1-TSgRayb4OXHvomcnC9bhXtdrljjdAXOZmPhdJKhD41vsVt3uvNCuyxelsnxsjtDdDjB7qM0mgCDESqOBXV2I2XmwHDTTIZvK595sg=w2400" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div></a>
-    </div>
-    </div>
-
-    <!-- The Tour Section -->
-    <div class="w3-black" id="tour">
-      <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-        <h2 class="w3-wide w3-center">PERFORMANCE DATES</h2>
-        <p class="w3-opacity w3-center"><i>Come see us live!</i></p><br>
-
-            <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-            <!-- <div class="w3-third w3-margin-bottom">
-            <img src="https://lh3.googleusercontent.com/nnn8jwh2BEAuu2dPKH2662prwn8-wAM48tFBT5qGL7oZ5J5DDe8cfsOeEIuA4fROTBG7kximzVnNgYvA7ZllJfj4TsdkvsXAqeOfG_1eggHf0fEnvKtjV_GW9BzWlTJY84uQ3gzOYw=w2400" alt="Paris" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white">
-              <p><b>Fundraiser Concert</b></p>
-              <p class="w3-opacity">Sat 11 Mar 2023</p>
-              <p>Mercy Beat is planning on hosting a fundraiser/concert with several other bands to rally up some money for the Orphanage from which Maya was adopted.</p>
-              <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">More info</button>
-              <a href="https://docs.google.com/document/d/1R66KusTKlugpcp7TxuWfxYvD3hduugZybPawJ3Lj4GU/edit"> <button class="w3-button w3-black w3-margin-bottom">6:30 at TKS</button> </a>
-            </div>
-          </div> -->
-          <div class="w3-third w3-margin-bottom">
-            <img src="https://lh3.googleusercontent.com/MVdSIUCe6kk3e6mNfbG7CdHO9Eq8QQ7QUnXaua-ZZIXHDdFl5otLBkJT5yyczlK8fcPiBWWrRlTZ_ntUm2yLonWX6r4B2gIKNWXbOj8mwlHnslDliYbu4gAlgNiRpA7KEShrmDZ_qd0=w2400" alt="Paris" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white">
-              <p><b>Fundraiser Concert</b></p>
-              <p class="w3-opacity">Sat 11 Mar 2023</p>
-              <p>Mercy Beat is planning on hosting a fundraiser/concert with several other bands to rally up some money for the Orphanage from which Maya was adopted.</p>
-              <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">More info</button> -->
-              <a href="https://www.instagram.com/p/Cnd8h4dMK-5/?utm_source=ig_web_copy_link"> <button class="w3-button w3-black w3-margin-bottom">More info </button> </a>
-            </div>
-          </div>
-          <div class="w3-third w3-margin-bottom">
-            <img src="https://lh3.googleusercontent.com/vb_s2qSjFwpSPUMzP4Z9Lkl_NalKkhQRAF2O_5NKmVtZ7KtDkorXPkXQP-PfmIrFE8kiV_WxCUZYHTaYqjnx8KxynOVcOby1OYhpR3o7A-Mh-w8P1_lQMs17j-cnG2Em9rAhxZ-6OQ=w2400" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white">
-              <p><b>Lunchtime Performances</b></p>
-              <p class="w3-opacity">Anytime</p>
-              <p>Keep an eye out for us at lunchtime or break performances! We'll be doing a few of these every now and then to show what we've been doing.</p>
-    <!--      <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">See you there!</button> -->
-            </div>
-          </div>
-        </div>
+          <a href="https://mercy-beat.github.io/about-maya"><div class="w3-half">
+            <p>Maya</p>
+            <img src="https://lh3.googleusercontent.com/_XVMtgNaT8ZeuMzzJy8r15yDCkDdO0-AGQwGjFTnrbFzldeZecMsFb8y59s3E8tm5Spl_RWrTMDOiPQmp3E28DzbC8Xl_FI47QCz7bf_b0sZU-jCHX369rRUpYYEWkQ-sQRrnDdb-w=w2400" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+          </div></a>
+          <a href="https://mercy-beat.github.io/about-cameron"><div class="w3-half">
+            <p>Cameron</p>
+            <img src="https://lh3.googleusercontent.com/G2ek5Gggr7e5vmY9kn299uGksiKQhmVwWNd3dbSLNbrlOzT-EO7eDXWMyGHP_g_Y2fjuOzwuxkoxgXhpNhkgmsHlFwM6TP21HrExCpbcZkrUkAhq7Zfdl2uGoBwiytxJmw4zfwwnSg=w2400" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+          </div></a>
+          <div class="w3-row w3-padding-32">
+          <a href="https://mercy-beat.github.io/about-elena"><div class="w3-half">
+            <p>Elena</p>
+            <img src="https://lh3.googleusercontent.com/c24N_ahsMAujks-F9DqsyxrevVtBHqVmQ00UFHKvhFt3D22r3up2G4fAxkxdRzj6Ku7xl_qjzJS2WrDNdAx-ie7kTfE2u8I18clL7m3zrojWiKAMmyK4m9P1ma3erBRbtHHyxDV4zg=w2400" class="w3-round" alt="Random Name" style="width:60%">
+          </div> </a>
+          <a href="https://mercy-beat.github.io/about-elise"><div class="w3-half">
+            <p>Elise</p>
+            <img src="https://lh3.googleusercontent.com/JLPX8IqyPOemXL2uZRlt3ZdUEnIyGCT1qyw1-TSgRayb4OXHvomcnC9bhXtdrljjdAXOZmPhdJKhD41vsVt3uvNCuyxelsnxsjtDdDjB7qM0mgCDESqOBXV2I2XmwHDTTIZvK595sg=w2400" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+          </div></a>
       </div>
-    </div>
-
-    <!-- Ticket Modal -->
-    <div id="ticketModal" class="w3-modal">
-      <div class="w3-modal-content w3-animate-top w3-card-4">
-        <header class="w3-container w3-teal w3-center w3-padding-32"> 
-          <span onclick="document.getElementById('ticketModal').style.display='none'" 
-         class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-          <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-        </header>
-        <div class="w3-container">
-          <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-          <input class="w3-input w3-border" type="text" placeholder="How many?">
-          <p><label><i class="fa fa-user"></i> Send To</label></p>
-          <input class="w3-input w3-border" type="text" placeholder="Enter email">
-          <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-          <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-          <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-        </div>
       </div>
-    </div>
 
-    <!-- The Contact Section -->
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-      <h2 class="w3-wide w3-center">CONTACT US</h2>
-      <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-      <div class="w3-row w3-padding-32">
-        <div class="w3-col m6 w3-large w3-margin-bottom">
-          <i class="fa fa-map-marker" style="width:30px"></i> KAUST, Saudi Arabia<br>
-          <!-- <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br> -->
-          <i class="fa fa-envelope" style="width:30px"> </i> Email: mercy.beat2022@mail.com<br>
-        </div>
-        <div class="w3-col m6">
-          <form action="/action_page.php" target="_blank">
-            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-              <div class="w3-half">
-                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <!-- The Tour Section -->
+      <div class="w3-black" id="tour">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+          <h2 class="w3-wide w3-center">PERFORMANCE DATES</h2>
+          <p class="w3-opacity w3-center"><i>Come see us live!</i></p><br>
+
+              <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+              <!-- <div class="w3-third w3-margin-bottom">
+              <img src="https://lh3.googleusercontent.com/nnn8jwh2BEAuu2dPKH2662prwn8-wAM48tFBT5qGL7oZ5J5DDe8cfsOeEIuA4fROTBG7kximzVnNgYvA7ZllJfj4TsdkvsXAqeOfG_1eggHf0fEnvKtjV_GW9BzWlTJY84uQ3gzOYw=w2400" alt="Paris" style="width:100%" class="w3-hover-opacity">
+              <div class="w3-container w3-white">
+                <p><b>Fundraiser Concert</b></p>
+                <p class="w3-opacity">Sat 11 Mar 2023</p>
+                <p>Mercy Beat is planning on hosting a fundraiser/concert with several other bands to rally up some money for the Orphanage from which Maya was adopted.</p>
+                <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">More info</button>
+                <a href="https://docs.google.com/document/d/1R66KusTKlugpcp7TxuWfxYvD3hduugZybPawJ3Lj4GU/edit"> <button class="w3-button w3-black w3-margin-bottom">6:30 at TKS</button> </a>
               </div>
-              <div class="w3-half">
-                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div> -->
+            <div class="w3-third w3-margin-bottom">
+              <img src="https://lh3.googleusercontent.com/MVdSIUCe6kk3e6mNfbG7CdHO9Eq8QQ7QUnXaua-ZZIXHDdFl5otLBkJT5yyczlK8fcPiBWWrRlTZ_ntUm2yLonWX6r4B2gIKNWXbOj8mwlHnslDliYbu4gAlgNiRpA7KEShrmDZ_qd0=w2400" alt="Paris" style="width:100%" class="w3-hover-opacity">
+              <div class="w3-container w3-white">
+                <p><b>Fundraiser Concert</b></p>
+                <p class="w3-opacity">Sat 11 Mar 2023</p>
+                <p>Mercy Beat is planning on hosting a fundraiser/concert with several other bands to rally up some money for the Orphanage from which Maya was adopted.</p>
+                <!-- <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">More info</button> -->
+                <a href="https://www.instagram.com/p/Cnd8h4dMK-5/?utm_source=ig_web_copy_link"> <button class="w3-button w3-black w3-margin-bottom">More info </button> </a>
               </div>
             </div>
-            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-            <!-- <?php
-             $to = "mercy.beat22@gmail.com";
-             $subject = "Message to Mercy Beat";
-
-             $message = "<input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">";
-             $message .= "<h1>This is headline.</h1>";
-
-             $header = "From:abc@somedomain.com \r\n";
-             $header .= "Cc:afgh@somedomain.com \r\n";
-             $header .= "MIME-Version: 1.0\r\n";
-             $header .= "Content-type: text/html\r\n";
-
-             $retval = mail ($to,$subject,$message,$header);
-
-             if( $retval == true ) {
-                echo "Message sent successfully...";
-             }else {
-                echo "Message could not be sent...";
-             }
-        ?> -->
-          </form>
+            <div class="w3-third w3-margin-bottom">
+              <img src="https://lh3.googleusercontent.com/vb_s2qSjFwpSPUMzP4Z9Lkl_NalKkhQRAF2O_5NKmVtZ7KtDkorXPkXQP-PfmIrFE8kiV_WxCUZYHTaYqjnx8KxynOVcOby1OYhpR3o7A-Mh-w8P1_lQMs17j-cnG2Em9rAhxZ-6OQ=w2400" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+              <div class="w3-container w3-white">
+                <p><b>Lunchtime Performances</b></p>
+                <p class="w3-opacity">Anytime</p>
+                <p>Keep an eye out for us at lunchtime or break performances! We'll be doing a few of these every now and then to show what we've been doing.</p>
+      <!--      <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">See you there!</button> -->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Ticket Modal -->
+      <div id="ticketModal" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+          <header class="w3-container w3-teal w3-center w3-padding-32"> 
+            <span onclick="document.getElementById('ticketModal').style.display='none'" 
+           class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+            <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+          </header>
+          <div class="w3-container">
+            <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+            <input class="w3-input w3-border" type="text" placeholder="How many?">
+            <p><label><i class="fa fa-user"></i> Send To</label></p>
+            <input class="w3-input w3-border" type="text" placeholder="Enter email">
+            <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+            <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+            <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Contact Section -->
+      <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+        <h2 class="w3-wide w3-center">CONTACT US</h2>
+        <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+        <div class="w3-row w3-padding-32">
+          <div class="w3-col m6 w3-large w3-margin-bottom">
+            <i class="fa fa-map-marker" style="width:30px"></i> KAUST, Saudi Arabia<br>
+            <!-- <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br> -->
+            <i class="fa fa-envelope" style="width:30px"> </i> Email: mercy.beat2022@mail.com<br>
+          </div>
+          <div class="w3-col m6">
+            <form action="/action_page.php" target="_blank">
+              <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                <div class="w3-half">
+                  <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                </div>
+                <div class="w3-half">
+                  <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                </div>
+              </div>
+              <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+              <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+              <!-- <?php
+               $to = "mercy.beat22@gmail.com";
+               $subject = "Message to Mercy Beat";
+
+               $message = "<input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">";
+               $message .= "<h1>This is headline.</h1>";
+
+               $header = "From:abc@somedomain.com \r\n";
+               $header .= "Cc:afgh@somedomain.com \r\n";
+               $header .= "MIME-Version: 1.0\r\n";
+               $header .= "Content-type: text/html\r\n";
+
+               $retval = mail ($to,$subject,$message,$header);
+
+               if( $retval == true ) {
+                  echo "Message sent successfully...";
+               }else {
+                  echo "Message could not be sent...";
+               }
+          ?> -->
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <!-- End Page Content -->
     </div>
 
-  <!-- End Page Content -->
-  </div>
+    <!-- Image of location/map -->
+    <img src="https://lh3.googleusercontent.com/a5GruZLULN2_JKZ88FMy8Lt2XzpFqFBywB9cDP_TFQQvobGQBjw425luTtnIH4SDMsjrjHa5GIlaA1gsA1MXNZSr3nAMdcrlFakX89WbDGfWGZFBZjub_9Ti3j8rWywkSGEJ5nFY5w=w2400" class="w3-image" style="width:100%">
 
-  <!-- Image of location/map -->
-  <img src="https://lh3.googleusercontent.com/a5GruZLULN2_JKZ88FMy8Lt2XzpFqFBywB9cDP_TFQQvobGQBjw425luTtnIH4SDMsjrjHa5GIlaA1gsA1MXNZSr3nAMdcrlFakX89WbDGfWGZFBZjub_9Ti3j8rWywkSGEJ5nFY5w=w2400" class="w3-image" style="width:100%">
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+      <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
+      <a href="https://www.instagram.com/mercy__beat/"><i class="fa-brands fa-instagram"></i></i></a>
+      <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+      <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+      <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
+      <!-- <i class="fa fa-linkedin w3-hover-opacity"></i> --> 
+      <a href="https://www.tiktok.com/@mercy_beat?lang=en"><i class="fa-brands fa-tiktok w3-hover-opacity"></i></a>
+      <a href="https://discord.gg/8mF4pkSMs3"><i class="fa-brands fa-discord"></i></a>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-    <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
-    <a href="https://www.instagram.com/mercy__beat/"><i class="fa-brands fa-instagram"></i></i></a>
-    <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
-    <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
-    <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
-    <!-- <i class="fa fa-linkedin w3-hover-opacity"></i> --> 
-    <a href="https://www.tiktok.com/@mercy_beat?lang=en"><i class="fa-brands fa-tiktok w3-hover-opacity"></i></a>
-    <a href="https://discord.gg/8mF4pkSMs3"><i class="fa-brands fa-discord"></i></a>
-  </footer>
+    <script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
 
-  <script>
-  // Automatic Slideshow - change image every 4 seconds
-  var myIndex = 0;
-  carousel();
-
-  function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 4000);    
-  }
-
-  // Used to toggle the menu on small screens when clicking on the menu button
-  function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else { 
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  var modal = document.getElementById('ticketModal');
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-   }
-    function openPopup() {
-      window.location.hash = 'openModal';
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 4000);    
     }
 
-    window.onload = openPopup;
-  </script>
-</body>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+     }
+      function openPopup() {
+        window.location.hash = 'openModal';
+      }
+
+      window.onload = openPopup;
+    </script>
+  </body>
 </html>
