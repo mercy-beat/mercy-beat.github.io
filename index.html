@@ -98,7 +98,7 @@
     <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
   </div>
 
-  <div class=”popup”>
+  <div class=”popup” onLoad="popup('autopopup.html', 'ad')">
     <button id=”close”>x</button>
     <img src="https://lh3.googleusercontent.com/MVdSIUCe6kk3e6mNfbG7CdHO9Eq8QQ7QUnXaua-ZZIXHDdFl5otLBkJT5yyczlK8fcPiBWWrRlTZ_ntUm2yLonWX6r4B2gIKNWXbOj8mwlHnslDliYbu4gAlgNiRpA7KEShrmDZ_qd0=w2400">
     <h2>Come to our fundraiser concert!</h2>
@@ -319,19 +319,6 @@
     }
   }
   </script>
-  <script  type="text/javascript">
-  window.addEventListener(“load”, function(){
-      setTimeout(
-          function open(event){
-              document.querySelector(“.popup”).style.display = “block”;
-          },
-          1000 
-      )
-  });
-  document.querySelector("#close").addEventListener("click", function(){
-      document.querySelector(".popup").style.display = "none";
-  });
-  </script>
-
+  <SCRIPT TYPE="text/javascript"> function popup(mylink, windowname) { if (! window.focus)return true; var href; if (typeof(mylink) == 'string') href=mylink; else href=mylink.href; window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); return false; } </SCRIPT>
 </body>
 </html>
